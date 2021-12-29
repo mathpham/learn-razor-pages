@@ -1,0 +1,24 @@
+@page
+
+@{
+    //Sử dụng @addTagHelper để kích hoạt sử dụng phương thức Post trong chương trình
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h3>@Message</h3>
+<form method="post">
+    <p><button class="btn btn-primary" type = "submit">Send Post Request</button></p>
+</form>
+
+<p><a href = "" class = "btn btn-primary">Send GET Request</a></p>
+
+@functions{
+    public string Message{get;set;}
+    public void OnGet(){
+        Message = "This is a GET Request!";
+    }
+    public void OnPost()
+    {
+        Message = "This is a POST Request!";
+    }
+}

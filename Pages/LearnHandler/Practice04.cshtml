@@ -1,0 +1,17 @@
+@page "{handler?}" 
+<!-- handler? giúp cho url gọn gàng hơn (không có chuỗi truy vẫn)-->
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Practice04Model
+
+@{
+    ViewData["Title"] = "Practice04";
+}
+<form method="post">
+    <button class = "btn btn-primary" asp-page-handler = "register">Register Now</button>
+    <button class = "btn btn-primary" asp-page-handler = "requestinfo">Request Info</button>
+</form>
+<a class = "btn btn-danger" asp-page-handler = "clear">Clear All</a>
+<a class = "btn btn-info" asp-page-handler = "reset">Reset All</a>
+
+<h3>@Model.Message</h3>
+
