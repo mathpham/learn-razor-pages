@@ -1,0 +1,29 @@
+@page
+@model Practice26Model
+@{
+    ViewData["Title"] = "List Box";
+    var method = Request.Method.ToUpper();
+}
+
+@if(method == "GET"){
+    <form method="post" class = "border border-light p3">
+        <h3>Which country did you visit?</h3>
+        <div>
+            <select class = "browser-default custom-select" name = "countries" multiple>
+                @foreach (var item in Model.Countries)
+                {
+                    <option value="@item.value">@item.display</option>
+                }
+            </select>
+        </div>
+        <button class = "btn btn-success btn-block my-2" type = "submit">Submit</button>
+        <button class = "btn btn-success btn-block my-2" type = "reset">Clear</button>
+    </form>
+}
+else if(method == "POST"){
+    <h3 class = "text-success">You have been to @foreach (var item in Model.VisitedCountries)
+    {
+        <strong>@item,</strong>
+    }</h3>
+    <a href="">Return</a>
+}

@@ -1,0 +1,30 @@
+@page
+@model Practice23Model
+@{
+    ViewData["Title"] = "Using CheckBox";
+}
+@if (Request.Method.ToUpper() == "GET")
+{
+    <h3>Which languages can you speak?</h3>
+    <form method="post">
+    @foreach (var item in Model.OfficialLanguages)
+        {
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="@item" name="languages" value="@item" />
+                <label class="custom-control-label" for "@item">@item</label>
+            </div>
+        }
+        <div class = "form-group">
+            <button class = "btn btn-success" type = "submit">Submit</button>
+            <button class = "btn btn-secondary" type ="reset">Clear</button>
+        </div>
+    </form>
+}
+else if (Request.Method.ToUpper() == "POST")
+{
+    <h3 class = "alert-success">You can speck: @foreach (var item in Model.Languages)
+    {
+        <b>@item </b>
+    }</h3>
+    <a href="">Return</a>
+}

@@ -1,0 +1,6 @@
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/LearnRazorPages
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/appsettings.Development.json
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/appsettings.json
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/LearnRazorPages.dll
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/LearnRazorPages.deps.json
+/Users/phamgiang/Documents/1_Works/5_DOTNET/LearnRazorPages/bin/Release/net6.0/publish/LearnRazorPages.runtimeconfig.json

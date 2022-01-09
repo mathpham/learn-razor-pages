@@ -1,0 +1,28 @@
+@page
+@model Practice25Model
+
+@{
+    ViewData["Title"] = "Using Combo box";
+}
+
+@if(Request.Method.ToUpper() == "GET"){
+    
+    <form method="post" class = "border border-light p-5">
+        <h3>Where you were born?</h3>
+        <div>
+            <select class = "custom-select" name = "country">
+                <option value = "Not specified" selected>Choose a country...</option>
+                @foreach (var item in @Model.Countries)
+                {
+                    <option value = "@item.value">@item.display</option>
+                }
+            </select>
+        </div>
+        <button type = "submit" class = "btn btn-success btn-block my-2">Submit</button>
+    </form>
+
+}
+else if(Request.Method.ToUpper() == "POST"){
+    <h3 class = "text-success">You were born in @Model.Country</h3>
+    <a href="">Return</a>
+}

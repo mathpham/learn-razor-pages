@@ -1,0 +1,28 @@
+@page
+@model Practice24Model
+@{
+    ViewData["Title"] = "Radio Button";
+}
+
+@if (Request.Method.ToUpper() == "GET")
+{
+    <h3>What is your native Language?</h3>
+    <form method="post">
+    @foreach (var item in Model.OfficialLanguages)
+        {
+            <div class="custom-control custom-radio">
+                <input type="radio" name="language" class="custom-control-input" value="@item" id="@item" />
+                <label class="custom-control-label" for="@item">@item</label>
+            </div>
+        }
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Submit</button>
+            <button class="btn btn-secondary" type="reset">Clear</button>
+        </div>
+    </form>
+}
+else if (Request.Method.ToUpper() == "POST")
+{
+    <h3 class="alert-success">Your native language is <b>@Model.Language</b></h3>
+    <a href="">Return</a>
+}

@@ -1,0 +1,7 @@
+@page "/{fullname?}/{email?}/{age:int?}"
+@model Practice34Model
+@{
+    ViewData["Title"] = "Route Binding";
+}
+<a href="/Donald%20Trump/trump@gmail.com/18">Get Binding</a>
+<strong>@Model.Message</strong>
